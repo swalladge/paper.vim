@@ -64,22 +64,26 @@
     # white       = ["#ffffff", 15, "white"]
 
     black       = ["#444444", 238, "black"]
-    darkred     = ["#D7005F", 1, "darkred"]
-    darkgreen   = ["#718C00", 2, "darkgreen"]
+    darkred     = ["#AF0000", 124, "darkred"]
+    darkgreen   = ["#008700", 28, "darkgreen"]
     darkyellow  = ["#5f8700", 64, "darkyellow"]
-    darkblue    = ["#4271AE", 4, "darkblue"]
-    lightgray = ["#878787", 102, "darkmagenta"]
-    darkcyan    = ["#3E999F", 6, "darkcyan"]
-    gray        = ["#4D4D4C", 7, "gray"]
+    darkblue    = ["#0087AF", 31, "darkblue"]
+    lightgray   = ["#878787", 102, "darkmagenta"]
+    darkcyan    = ["#005F87", 24, "darkcyan"]
+    gray        = ["#4D4D4C", 238, "gray"]
     darkgray    = ["#BCBCBC", 250, "darkgray"]
-    red         = ["#D7005F", 9, "red"]
-    green       = ["#718C00", 10, "green"]
-    yellow      = ["#FFFF5F", 11, "yellow"]
-    blue        = ["#4271AE", 12, "blue"]
-    orange     = ["#D75F00", 166, "magenta"]
-    cyan        = ["#3E999F", 14, "cyan"]
+    red         = ["#D70000", 160, "red"]
+    green       = ["#D70087", 162, "green"]
+    yellow      = ["#8700AF", 91, "yellow"]
+    blue        = ["#D75F00", 166, "blue"]
+    orange      = ["#D75F00", 166, "magenta"]
+    cyan        = ["#005FAF", 25, "cyan"]
     white       = ["#F5F5F5", 255, "white"]
-    offwhite       = ["#E4E4E4", 254, "white"]
+    offwhite    = ["#E4E4E4", 254, "white"]
+    diffadd_bg  = ['#AFFFAF', 157, "green"]
+    diffchange_bg = ['#FFD787', 222, "yellow"]
+    error_bg    = ['#FFD7FF', 225, "red"]
+    difftext_bg = ['#FFFFD7', 230, "white"]
 
     # Step 3: highlights
     #
@@ -120,27 +124,27 @@
         [ "Comment", "NONE", lightgray, "NONE" ],
         [ "Constant", "NONE", orange, "NONE" ],
         [ "Error", red, white, "NONE" ],
-        [ "Identifier", black, darkcyan, "NONE" ],
-        [ "Ignore", black, darkgray, "NONE" ],
-        [ "PreProc", black, darkcyan, "NONE" ],
-        [ "Special", black, darkgray, "NONE" ],
-        [ "Statement", black, darkgray, "NONE" ],
+        [ "Identifier", "NONE", darkcyan, "NONE" ],
+        [ "Ignore", white, darkgray, "NONE" ],
+        [ "PreProc", white, darkcyan, "NONE" ],
+        [ "Special", white, darkgray, "NONE" ],
+        [ "Statement", white, darkgray, "NONE" ],
         [ "String", "NONE", darkyellow, "NONE" ],
         [ "Number", "Constant" ],
-        [ "Todo", black, darkgray, "NONE" ],
-        [ "Type", black, darkgray, "NONE" ],
-        [ "Underlined", black, darkgray, "NONE" ],
-        [ "StatusLine", black, darkgray, "NONE" ],
-        [ "StatusLineNC", black, darkgray, "NONE" ],
-        [ "VertSplit", black, darkgray, "NONE" ],
-        [ "TabLine", black, darkgray, "NONE" ],
-        [ "TabLineFill", black, darkgray, "NONE" ],
-        [ "TabLineSel", black, darkgray, "NONE" ],
-        [ "Title", black, darkgray, "NONE" ],
+        [ "Todo", white, darkgray, "NONE" ],
+        [ "Type", white, darkgray, "NONE" ],
+        [ "Underlined", white, darkgray, "NONE" ],
+        [ "StatusLine", white, darkgray, "NONE" ],
+        [ "StatusLineNC", white, darkgray, "NONE" ],
+        [ "VertSplit", white, darkgray, "NONE" ],
+        [ "TabLine", white, darkgray, "NONE" ],
+        [ "TabLineFill", white, darkgray, "NONE" ],
+        [ "TabLineSel", white, darkgray, "NONE" ],
+        [ "Title", white, darkgray, "NONE" ],
         [ "CursorLine", offwhite, "NONE", "NONE" ],
-        [ "LineNr", black, darkgray, "NONE" ],
-        [ "CursorLineNr", black, darkgray, "NONE" ],
-        [ "helpLeadBlank", black, darkgray, "NONE" ],
+        [ "LineNr", white, darkgray, "NONE" ],
+        [ "CursorLineNr", white, darkgray, "NONE" ],
+        [ "helpLeadBlank", white, darkgray, "NONE" ],
         [ "helpNormal", white, darkgray, "NONE" ],
         [ "Visual", white, darkgray, "NONE" ],
         [ "VisualNOS", white, darkgray, "NONE" ],
@@ -152,10 +156,10 @@
         [ "Folded", white, darkgray, "NONE" ],
         [ "WildMenu", white, darkgray, "NONE" ],
         [ "SpecialKey", white, darkgray, "NONE" ],
-        [ "DiffAdd", white, darkgray, "NONE" ],
-        [ "DiffChange", white, darkgray, "NONE" ],
-        [ "DiffDelete", white, darkgray, "NONE" ],
-        [ "DiffText", white, darkgray, "NONE" ],
+        [ "DiffAdd", diffadd_bg, darkgray, "NONE" ],
+        [ "DiffChange", diffchange_bg, black, "NONE" ],
+        [ "DiffDelete", error_bg, black, "NONE" ],
+        [ "DiffText", white, difftext_bg, "NONE" ],
         [ "IncSearch", yellow, gray, "NONE" ],
         [ "Search", yellow, gray, "NONE" ],
         [ "Directory", white, darkgray, "NONE" ],
@@ -164,8 +168,8 @@
         [ "SpellCap", white, darkgray, "NONE", blue ],
         [ "SpellLocal", white, darkgray, "NONE", orange ],
         [ "SpellRare", white, darkgray, "NONE", cyan ],
-        [ "ColorColumn", white, darkgray, "NONE" ],
-        [ "SignColumn", white, darkgray, "NONE" ],
+        [ "ColorColumn", offwhite, "NONE", "NONE" ],
+        [ "SignColumn", white, darkgreen, "NONE" ],
         [ "ErrorMsg", white, darkgray, "NONE" ],
         [ "ModeMsg", white, darkgray, "NONE" ],
         [ "MoreMsg", white, darkgray, "NONE" ],
@@ -175,7 +179,9 @@
         [ "CursorColumn", white, darkgray, "NONE" ],
         [ "QuickFixLine", white, darkgray, "NONE" ],
         [ "StatusLineTerm", white, darkgray, "NONE" ],
-        [ "StatusLineTermNC", white, darkgray, "NONE" ]
+        [ "StatusLineTermNC", white, darkgray, "NONE" ],
+        [ "Keyword", "NONE", cyan, "NONE" ],
+        [ "rubySymbol", "Identifier" ],
     ]
 
     # Define the color platte used by :terminal when in GUI Vim
