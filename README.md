@@ -52,7 +52,7 @@ This colour scheme is developed using romainl's [erb
 template](https://gist.github.com/romainl/5cd2f4ec222805f49eca). Ruby must be
 installed (for the `erb` command).
 
-Edit the variables in `templates/paper.erb` and run `make` to build
+Edit the variables in `colors/paper.erb` and run `make` to build
 `colors/paper.vim`. `colors/paper.vim` should not be edited directly.
 
 

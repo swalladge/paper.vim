@@ -4,5 +4,5 @@
 
 all: colors/paper.vim
 
-colors/%.vim: templates/%.erb
+%.vim: %.erb
 	erb -T - $< > $@
