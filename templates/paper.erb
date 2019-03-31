@@ -53,8 +53,8 @@
     # darkblue    = ["#000080", 4, "darkblue"]
     # darkmagenta = ["#800080", 5, "darkmagenta"]
     # darkcyan    = ["#008080", 6, "darkcyan"]
-    # gray        = ["#c0c0c0", 7, "gray"]
-    # darkgray    = ["#808080", 8, "darkgray"]
+    # grey        = ["#c0c0c0", 7, "gray"]
+    # darkgrey    = ["#808080", 8, "darkgray"]
     # red         = ["#ff0000", 9, "red"]
     # green       = ["#00ff00", 10, "green"]
     # yellow      = ["#ffff00", 11, "yellow"]
@@ -63,27 +63,42 @@
     # cyan        = ["#00ffff", 14, "cyan"]
     # white       = ["#ffffff", 15, "white"]
 
-    black       = ["#444444", 238, "black"]
-    darkred     = ["#AF0000", 124, "darkred"]
-    darkgreen   = ["#008700", 28, "darkgreen"]
-    darkyellow  = ["#5f8700", 64, "darkyellow"]
-    darkblue    = ["#0087AF", 31, "darkblue"]
-    lightgray   = ["#878787", 102, "darkmagenta"]
-    darkcyan    = ["#005F87", 24, "darkcyan"]
-    gray        = ["#4D4D4C", 238, "gray"]
-    darkgray    = ["#BCBCBC", 250, "darkgray"]
-    red         = ["#D70000", 160, "red"]
-    green       = ["#D70087", 162, "green"]
-    yellow      = ["#8700AF", 91, "yellow"]
-    blue        = ["#D75F00", 166, "blue"]
-    orange      = ["#D75F00", 166, "magenta"]
-    cyan        = ["#005FAF", 25, "cyan"]
-    white       = ["#F5F5F5", 255, "white"]
-    offwhite    = ["#E4E4E4", 254, "white"]
-    diffadd_bg  = ['#AFFFAF', 157, "green"]
-    diffchange_bg = ['#FFD787', 222, "yellow"]
-    error_bg    = ['#FFD7FF', 225, "red"]
-    difftext_bg = ['#FFFFD7', 230, "white"]
+    black                  = ["#444444", 238, "black"]
+    darkred                = ["#AF0000", 124, "darkred"]
+    darkgreen              = ["#008700", 28, "darkgreen"]
+    darkyellow             = ["#5F8700", 64, "darkyellow"]
+    darkblue               = ["#0087AF", 31, "darkblue"]
+
+    darkcyan               = ["#005F87", 24, "darkcyan"]
+    darkgrey               = ["#777777", 102, "darkgray"]
+
+    lightgrey              = ["#ADADAD", 250, "gray"]
+    red                    = ["#D70000", 160, "red"]
+    green                  = ["#D70087", 162, "green"]
+    yellow                 = ['#FFFF5F', 227, "yellow"]
+    purple                 = ["#8700AF", 91, "blue"]
+    orange                 = ["#D75F00", 166, "magenta"]
+    cyan                   = ["#005FAF", 25, "cyan"]
+    white                  = ["#EEEEEE", 255, "white"]
+
+    offwhite               = ["#E4E4E4", 254, "white"]
+    verylightgrey          = ['#C8C8C8', 252, "white"]
+
+    diffadd_bg             = ['#AFFFAF', 157, "white"]
+    diffchange_bg          = ['#FFD787', 222, "orange"]
+    error_bg               = ['#FFD7FF', 225, "red"]
+    difftext_bg            = ['#FFFFD7', 230, "white"]
+    folded_bg              = ['#AFD7FF', 153, "white"]
+    wildmenu_bg            = ['#FFFF00', 226, "yellow"]
+    spellbad               = ['#FFAFD7', 218, "red"]
+    spellcap               = ['#FFFFAF', 229, "gray"]
+    spellrare              = ['#AFFF87', 156, "green"]
+    spelllocal             = ['#D7D7FF', 189, "cyan"]
+    blue_highlighter       = ['#D7FFFF', 195, "cyan"]
+    cursorlinenr_fg        = ['#AF5F00', 130, "darkred"]
+    linenumber_fg          = ['#B2B2B2', 249, "gray"]
+    todo_fg                = ['#00AF5F', 35, "cyan"]
+    matchparen_bg          = ['#C6C6C6', 251, "darkgray"]
 
     # Step 3: highlights
     #
@@ -120,66 +135,66 @@
     # remove any if you want a working colorscheme.
     highlights = [
         [ "Normal", white, black, "NONE" ],
-        [ "NonText", white, darkgray, "NONE" ],
-        [ "Comment", "NONE", lightgray, "NONE" ],
+        [ "NonText", white, darkgrey, "NONE" ],
+        [ "Comment", "NONE", darkgrey, "NONE" ],
         [ "Constant", "NONE", orange, "NONE" ],
-        [ "Error", red, white, "NONE" ],
+        [ "Error", error_bg, darkred, "NONE" ],
         [ "Identifier", "NONE", darkcyan, "NONE" ],
-        [ "Ignore", white, darkgray, "NONE" ],
+        [ "Ignore", white, darkgrey, "NONE" ],
         [ "PreProc", white, darkcyan, "NONE" ],
-        [ "Special", white, darkgray, "NONE" ],
-        [ "Statement", white, darkgray, "NONE" ],
+        [ "Special", white, darkgrey, "NONE" ],
+        [ "Statement", white, darkgrey, "NONE" ],
         [ "String", "NONE", darkyellow, "NONE" ],
         [ "Number", "Constant" ],
-        [ "Todo", white, darkgray, "NONE" ],
-        [ "Type", white, darkgray, "NONE" ],
-        [ "Underlined", white, darkgray, "NONE" ],
-        [ "StatusLine", white, darkgray, "NONE" ],
-        [ "StatusLineNC", white, darkgray, "NONE" ],
-        [ "VertSplit", white, darkgray, "NONE" ],
-        [ "TabLine", white, darkgray, "NONE" ],
-        [ "TabLineFill", white, darkgray, "NONE" ],
-        [ "TabLineSel", white, darkgray, "NONE" ],
-        [ "Title", white, darkgray, "NONE" ],
+        [ "Todo", blue_highlighter, black, "NONE" ],
+        [ "Type", white, darkgrey, "NONE" ],
+        [ "Underlined", white, darkgrey, "NONE" ],
+        [ "StatusLine", darkcyan, offwhite, "NONE" ],
+        [ "StatusLineNC", verylightgrey, black, "NONE" ],
+        [ "VertSplit", white, darkcyan, "NONE" ],
+        [ "TabLine", cyan, white, "NONE" ],
+        [ "TabLineFill", darkcyan, darkcyan, "NONE" ],
+        [ "TabLineSel", offwhite, black, "NONE" ],
+        [ "Title", white, darkgrey, "NONE" ],
         [ "CursorLine", offwhite, "NONE", "NONE" ],
-        [ "LineNr", white, darkgray, "NONE" ],
-        [ "CursorLineNr", white, darkgray, "NONE" ],
-        [ "helpLeadBlank", white, darkgray, "NONE" ],
-        [ "helpNormal", white, darkgray, "NONE" ],
-        [ "Visual", white, darkgray, "NONE" ],
-        [ "VisualNOS", white, darkgray, "NONE" ],
-        [ "Pmenu", white, darkgray, "NONE" ],
-        [ "PmenuSbar", white, darkgray, "NONE" ],
-        [ "PmenuSel", white, darkgray, "NONE" ],
-        [ "PmenuThumb", white, darkgray, "NONE" ],
-        [ "FoldColumn", white, darkgray, "NONE" ],
-        [ "Folded", white, darkgray, "NONE" ],
-        [ "WildMenu", white, darkgray, "NONE" ],
-        [ "SpecialKey", white, darkgray, "NONE" ],
-        [ "DiffAdd", diffadd_bg, darkgray, "NONE" ],
+        [ "LineNr", white, darkgrey, "NONE" ],
+        [ "CursorLineNr", white, orange, "NONE" ],
+        [ "helpLeadBlank", white, darkgrey, "NONE" ],
+        [ "helpNormal", white, darkgrey, "NONE" ],
+        [ "Visual", darkblue, white, "NONE" ],
+        [ "VisualNOS", darkblue, white, "NONE" ],
+        [ "Pmenu", verylightgrey, black, "NONE" ],
+        [ "PmenuSbar", white, darkgrey, "NONE" ],
+        [ "PmenuSel", white, darkgrey, "NONE" ],
+        [ "PmenuThumb", white, darkgrey, "NONE" ],
+        [ "FoldColumn", white, darkgrey, "NONE" ],
+        [ "Folded", folded_bg, darkblue, "NONE" ],
+        [ "WildMenu", white, black, "NONE" ],
+        [ "SpecialKey", white, darkgrey, "NONE" ],
+        [ "DiffAdd", diffadd_bg, darkgreen, "NONE" ],
         [ "DiffChange", diffchange_bg, black, "NONE" ],
-        [ "DiffDelete", error_bg, black, "NONE" ],
-        [ "DiffText", white, difftext_bg, "NONE" ],
-        [ "IncSearch", yellow, gray, "NONE" ],
-        [ "Search", yellow, gray, "NONE" ],
-        [ "Directory", white, darkgray, "NONE" ],
-        [ "MatchParen", white, darkgray, "NONE" ],
-        [ "SpellBad", white, darkgray, "NONE", red ],
-        [ "SpellCap", white, darkgray, "NONE", blue ],
-        [ "SpellLocal", white, darkgray, "NONE", orange ],
-        [ "SpellRare", white, darkgray, "NONE", cyan ],
+        [ "DiffDelete", error_bg, darkred, "NONE" ],
+        [ "DiffText", difftext_bg, darkblue, "NONE" ],
+        [ "IncSearch", yellow, black, "NONE" ],
+        [ "Search", yellow, black, "NONE" ],
+        [ "Directory", white, darkgrey, "NONE" ],
+        [ "MatchParen", matchparen_bg, darkcyan, "NONE" ],
+        [ "SpellBad", white, black, "NONE", red ],
+        [ "SpellCap", white, black, "NONE", purple ],
+        [ "SpellLocal", white, black, "NONE", orange ],
+        [ "SpellRare", white, black, "NONE", cyan ],
         [ "ColorColumn", offwhite, "NONE", "NONE" ],
         [ "SignColumn", white, darkgreen, "NONE" ],
-        [ "ErrorMsg", white, darkgray, "NONE" ],
-        [ "ModeMsg", white, darkgray, "NONE" ],
-        [ "MoreMsg", white, darkgray, "NONE" ],
-        [ "Question", white, darkgray, "NONE" ],
+        [ "ErrorMsg", error_bg, darkred, "NONE" ],
+        [ "ModeMsg", white, darkgrey, "NONE" ],
+        [ "MoreMsg", white, darkgrey, "NONE" ],
+        [ "Question", white, darkgrey, "NONE" ],
         [ "WarningMsg", "Error" ],
-        [ "Cursor", white, darkgray, "NONE" ],
-        [ "CursorColumn", white, darkgray, "NONE" ],
-        [ "QuickFixLine", white, darkgray, "NONE" ],
-        [ "StatusLineTerm", white, darkgray, "NONE" ],
-        [ "StatusLineTermNC", white, darkgray, "NONE" ],
+        [ "Cursor", darkcyan, white, "NONE" ],
+        [ "CursorColumn", offwhite, "NONE", "NONE" ],
+        [ "QuickFixLine", "Search" ],
+        [ "StatusLineTerm", darkcyan, offwhite, "NONE" ],
+        [ "StatusLineTermNC", verylightgrey, black, "NONE" ],
         [ "Keyword", "NONE", cyan, "NONE" ],
         [ "rubySymbol", "Identifier" ],
     ]
@@ -196,14 +211,14 @@
         darkgreen,
         darkyellow,
         darkblue,
-        lightgray,
+        darkgrey,
         darkcyan,
-        gray,
-        darkgray,
+        lightgrey,
+        darkgrey,
         red,
         green,
         yellow,
-        blue,
+        purple,
         orange,
         cyan,
         white
