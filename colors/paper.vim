@@ -165,7 +165,6 @@ let links = [
     \ ['Number', 'Constant'],
     \ ['WarningMsg', 'Error'],
     \ ['QuickFixLine', 'Search'],
-    \ ['rubySymbol', 'Identifier'],
     \ ]
 
 augroup paper
