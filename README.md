@@ -22,6 +22,8 @@ Inspired by [papercolor-theme](https://github.com/NLKNguyen/papercolor-theme)
 by [Nikyle Nguyen](https://github.com/NLKNguyen). Design copied under the terms
 of the MIT license.
 
+Pull requests, bug reports, suggestions, or comments appreciated!
+
 
 ## Installation
 
@@ -35,6 +37,15 @@ of the MIT license.
 ```
 
 
+## Configuration
+
+This is a lean mean colorscheme. There is no configuration. If you want to
+customize the colours, you are free to fork the repository and make changes as
+you wish (see development info below). Please consider making a pull request
+back to the original repository if you feel your changes may benefit the wider
+community.
+
+
 ## Development
 
 This colour scheme is developed using romainl's [erb
@@ -44,7 +55,6 @@ installed (for the `erb` command).
 Edit the variables in `templates/paper.erb` and run `make` to build
 `colors/paper.vim`. `colors/paper.vim` should not be edited directly.
 
-Pull requests and bug reports appreciated!
 
 
 ## License
