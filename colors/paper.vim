@@ -75,25 +75,6 @@ if ($TERM =~ '256' || &t_Co >= 256) || has("gui_running")
     hi StatusLineTermNC ctermbg=252 ctermfg=238 cterm=NONE guibg=#C8C8C8 guifg=#444444 gui=NONE
     hi Keyword ctermbg=NONE ctermfg=25 cterm=NONE guibg=NONE guifg=#005FAF gui=NONE
 
-    let g:terminal_ansi_colors = [
-        \ '#444444',
-        \ '#AF0000',
-        \ '#008700',
-        \ '#5F8700',
-        \ '#0087AF',
-        \ '#777777',
-        \ '#005F87',
-        \ '#ADADAD',
-        \ '#777777',
-        \ '#D70000',
-        \ '#D70087',
-        \ '#FFFF5F',
-        \ '#8700AF',
-        \ '#D75F00',
-        \ '#005FAF',
-        \ '#EEEEEE',
-        \ ]
-
 elseif &t_Co == 8 || $TERM !~# '^linux' || &t_Co == 16
     set t_Co=16
 
@@ -161,15 +142,27 @@ elseif &t_Co == 8 || $TERM !~# '^linux' || &t_Co == 16
     hi Keyword ctermbg=NONE ctermfg=cyan cterm=NONE
 endif
 
-let links = [
-    \ ['Number', 'Constant'],
-    \ ['WarningMsg', 'Error'],
-    \ ['QuickFixLine', 'Search'],
-    \ ]
+hi link Number Constant
+hi link WarningMsg Error
+hi link QuickFixLine Search
 
-augroup paper
-    autocmd!
-    autocmd ColorScheme * if expand("<amatch>") == "paper" | for link in links | execute 'hi link' link[0] link[1] | endfor | else | for link in links | execute 'hi link' link[0] 'NONE' | endfor | endif
-augroup END
+let g:terminal_ansi_colors = [
+        \ '#444444',
+        \ '#AF0000',
+        \ '#008700',
+        \ '#5F8700',
+        \ '#0087AF',
+        \ '#777777',
+        \ '#005F87',
+        \ '#ADADAD',
+        \ '#777777',
+        \ '#D70000',
+        \ '#D70087',
+        \ '#FFFF5F',
+        \ '#8700AF',
+        \ '#D75F00',
+        \ '#005FAF',
+        \ '#EEEEEE',
+        \ ]
 
 " Generated with RNB (https://gist.github.com/romainl/5cd2f4ec222805f49eca)
