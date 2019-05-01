@@ -1,4 +1,3 @@
-
 # paper.vim
 
 Copyright © 2019 Samuel Walladge
@@ -12,11 +11,9 @@ A light colour scheme designed with the following goals:
 2. look like writing and annotations on paper
 3. be simple: no configuration, custom terminal colours, etc.
 
-NOTE: this is not yet complete - there are still more highlight-groups to add
-and configure, and more colour tweaks I want to make. Feel free to take it for
-a test drive, but it will feel incomplete.
-
 Should work out of the box for 256 colour terminals and 24bit gui/terminals.
+If something doesn't look quite right, please open and issue with a description
+of the problem and ideally a screenshot.
 
 Inspired by [papercolor-theme](https://github.com/NLKNguyen/papercolor-theme)
 by [Nikyle Nguyen](https://github.com/NLKNguyen). Design copied under the terms
@@ -32,6 +29,7 @@ Example screenshot:
 ## Installation
 
 `:h packages` or use a package manager of your choice.
+
 
 ## Usage
 

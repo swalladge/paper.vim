@@ -3,6 +3,8 @@
     # Author:        Romain Lafourcade (https://github.com/romainl)
     # Canonical URL: https://gist.github.com/romainl/5cd2f4ec222805f49eca
 
+    # NOTE: This file contains configuration to build the paper.vim colorscheme.
+
     # This template is designed to help vimmers create their own colorschemes
     # without much effort.
     #
@@ -16,10 +18,6 @@
     #   4. and generate your colorscheme.
 
     # Step 1: information
-    #
-    # Make sure the name of your colorscheme is unique and attractive.
-    # The description should fit in a single line with no linefeed.
-    # 'background' can be "light" or "dark".
     information = {
         author:      "swalladge",
         email:       "samuel@swalladge.id.au",
@@ -42,26 +40,6 @@
     #
     # If your colors are defined correctly, the resulting colorscheme is guaranteed
     # to work in GVim (Windows/Linux), MacVim, and any properly set up terminal emulator.
-    #
-    # The colors below are the first 16 colors of the xterm palette. They
-    # are only here as an example, though. You can get rid of them, I won't be mad.
-
-    # black       = ["#000000", 0, "black"]
-    # darkred     = ["#800000", 1, "darkred"]
-    # darkgreen   = ["#008000", 2, "darkgreen"]
-    # darkyellow  = ["#808000", 3, "darkyellow"]
-    # darkblue    = ["#000080", 4, "darkblue"]
-    # darkmagenta = ["#800080", 5, "darkmagenta"]
-    # darkcyan    = ["#008080", 6, "darkcyan"]
-    # grey        = ["#c0c0c0", 7, "gray"]
-    # darkgrey    = ["#808080", 8, "darkgray"]
-    # red         = ["#ff0000", 9, "red"]
-    # green       = ["#00ff00", 10, "green"]
-    # yellow      = ["#ffff00", 11, "yellow"]
-    # blue        = ["#0000ff", 12, "blue"]
-    # magenta     = ["#ff00ff", 13, "magenta"]
-    # cyan        = ["#00ffff", 14, "cyan"]
-    # white       = ["#ffffff", 15, "white"]
 
     black                  = ["#444444", 238, "black"]
     darkred                = ["#AF0000", 124, "darkred"]
@@ -87,16 +65,8 @@
     green_highlighter      = ['#AFFFAF', 157, "white"]
     orange_highlighter     = ['#FFD787', 222, "orange"]
     red_highlighter        = ['#FFD7FF', 225, "red"]
-    difftext_bg            = ['#FFFFD7', 230, "white"]
     yellow_highlighter     = ['#FFFF00', 226, "yellow"]
-    spellbad               = ['#FFAFD7', 218, "red"]
-    spellcap               = ['#FFFFAF', 229, "gray"]
-    spellrare              = ['#AFFF87', 156, "green"]
-    spelllocal             = ['#D7D7FF', 189, "cyan"]
     blue_highlighter       = ['#D7FFFF', 195, "cyan"]
-    cursorlinenr_fg        = ['#AF5F00', 130, "darkred"]
-    linenumber_fg          = ['#B2B2B2', 249, "gray"]
-    todo_fg                = ['#00AF5F', 35, "cyan"]
 
     # Step 3: highlights
     #
@@ -144,7 +114,7 @@
         [ "Statement", white, darkgrey, "NONE" ],
         [ "String", "NONE", darkyellow, "NONE" ],
         [ "Number", "Constant" ],
-        [ "Todo", blue_highlighter, black, "NONE" ],
+        [ "Todo", blue_highlighter, black, "bold" ],
         [ "Type", white, pink, "NONE" ],
         [ "Underlined", white, darkgrey, "underline" ],
         [ "StatusLine", darkcyan, offwhite, "NONE" ],
@@ -172,7 +142,7 @@
         [ "DiffAdd", green_highlighter, darkgreen, "NONE" ],
         [ "DiffChange", orange_highlighter, black, "NONE" ],
         [ "DiffDelete", red_highlighter, darkred, "NONE" ],
-        [ "DiffText", difftext_bg, darkblue, "NONE" ],
+        [ "DiffText", yellow_highlighter, black, "NONE" ],
         [ "IncSearch", yellow, black, "NONE" ],
         [ "Search", yellow, black, "NONE" ],
         [ "Directory", white, darkgrey, "NONE" ],

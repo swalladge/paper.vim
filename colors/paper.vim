@@ -26,7 +26,7 @@ if ($TERM =~ '256' || &t_Co >= 256) || has("gui_running")
     hi Special ctermbg=255 ctermfg=166 cterm=NONE guibg=#EEEEEE guifg=#D75F00 gui=NONE
     hi Statement ctermbg=255 ctermfg=102 cterm=NONE guibg=#EEEEEE guifg=#777777 gui=NONE
     hi String ctermbg=NONE ctermfg=64 cterm=NONE guibg=NONE guifg=#5F8700 gui=NONE
-    hi Todo ctermbg=195 ctermfg=238 cterm=NONE guibg=#D7FFFF guifg=#444444 gui=NONE
+    hi Todo ctermbg=195 ctermfg=238 cterm=bold guibg=#D7FFFF guifg=#444444 gui=bold
     hi Type ctermbg=255 ctermfg=162 cterm=NONE guibg=#EEEEEE guifg=#D70087 gui=NONE
     hi Underlined ctermbg=255 ctermfg=102 cterm=underline guibg=#EEEEEE guifg=#777777 gui=underline
     hi StatusLine ctermbg=24 ctermfg=254 cterm=NONE guibg=#005F87 guifg=#E4E4E4 gui=NONE
@@ -54,7 +54,7 @@ if ($TERM =~ '256' || &t_Co >= 256) || has("gui_running")
     hi DiffAdd ctermbg=157 ctermfg=28 cterm=NONE guibg=#AFFFAF guifg=#008700 gui=NONE
     hi DiffChange ctermbg=222 ctermfg=238 cterm=NONE guibg=#FFD787 guifg=#444444 gui=NONE
     hi DiffDelete ctermbg=225 ctermfg=124 cterm=NONE guibg=#FFD7FF guifg=#AF0000 gui=NONE
-    hi DiffText ctermbg=230 ctermfg=31 cterm=NONE guibg=#FFFFD7 guifg=#0087AF gui=NONE
+    hi DiffText ctermbg=226 ctermfg=238 cterm=NONE guibg=#FFFF00 guifg=#444444 gui=NONE
     hi IncSearch ctermbg=227 ctermfg=238 cterm=NONE guibg=#FFFF5F guifg=#444444 gui=NONE
     hi Search ctermbg=227 ctermfg=238 cterm=NONE guibg=#FFFF5F guifg=#444444 gui=NONE
     hi Directory ctermbg=255 ctermfg=102 cterm=NONE guibg=#EEEEEE guifg=#777777 gui=NONE
@@ -92,7 +92,7 @@ elseif &t_Co == 8 || $TERM !~# '^linux' || &t_Co == 16
     hi Special ctermbg=white ctermfg=magenta cterm=NONE
     hi Statement ctermbg=white ctermfg=darkgray cterm=NONE
     hi String ctermbg=NONE ctermfg=darkyellow cterm=NONE
-    hi Todo ctermbg=cyan ctermfg=black cterm=NONE
+    hi Todo ctermbg=cyan ctermfg=black cterm=bold
     hi Type ctermbg=white ctermfg=magenta cterm=NONE
     hi Underlined ctermbg=white ctermfg=darkgray cterm=underline
     hi StatusLine ctermbg=darkcyan ctermfg=white cterm=NONE
@@ -120,7 +120,7 @@ elseif &t_Co == 8 || $TERM !~# '^linux' || &t_Co == 16
     hi DiffAdd ctermbg=white ctermfg=darkgreen cterm=NONE
     hi DiffChange ctermbg=orange ctermfg=black cterm=NONE
     hi DiffDelete ctermbg=red ctermfg=darkred cterm=NONE
-    hi DiffText ctermbg=white ctermfg=darkblue cterm=NONE
+    hi DiffText ctermbg=yellow ctermfg=black cterm=NONE
     hi IncSearch ctermbg=yellow ctermfg=black cterm=NONE
     hi Search ctermbg=yellow ctermfg=black cterm=NONE
     hi Directory ctermbg=white ctermfg=darkgray cterm=NONE
