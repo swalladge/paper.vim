@@ -74,7 +74,7 @@
 
     lightgrey              = ["#ADADAD", 250, "gray"]
     red                    = ["#D70000", 160, "red"]
-    green                  = ["#D70087", 162, "green"]
+    pink                   = ["#D70087", 162, "magenta"]
     yellow                 = ['#FFFF5F', 227, "yellow"]
     purple                 = ["#8700AF", 91, "blue"]
     orange                 = ["#D75F00", 166, "magenta"]
@@ -84,12 +84,11 @@
     offwhite               = ["#E4E4E4", 254, "white"]
     verylightgrey          = ['#C8C8C8', 252, "white"]
 
-    diffadd_bg             = ['#AFFFAF', 157, "white"]
-    diffchange_bg          = ['#FFD787', 222, "orange"]
-    error_bg               = ['#FFD7FF', 225, "red"]
+    green_highlighter      = ['#AFFFAF', 157, "white"]
+    orange_highlighter     = ['#FFD787', 222, "orange"]
+    red_highlighter        = ['#FFD7FF', 225, "red"]
     difftext_bg            = ['#FFFFD7', 230, "white"]
-    folded_bg              = ['#AFD7FF', 153, "white"]
-    wildmenu_bg            = ['#FFFF00', 226, "yellow"]
+    yellow_highlighter     = ['#FFFF00', 226, "yellow"]
     spellbad               = ['#FFAFD7', 218, "red"]
     spellcap               = ['#FFFFAF', 229, "gray"]
     spellrare              = ['#AFFF87', 156, "green"]
@@ -98,7 +97,6 @@
     cursorlinenr_fg        = ['#AF5F00', 130, "darkred"]
     linenumber_fg          = ['#B2B2B2', 249, "gray"]
     todo_fg                = ['#00AF5F', 35, "cyan"]
-    matchparen_bg          = ['#C6C6C6', 251, "darkgray"]
 
     # Step 3: highlights
     #
@@ -138,23 +136,23 @@
         [ "NonText", white, darkgrey, "NONE" ],
         [ "Comment", "NONE", darkgrey, "NONE" ],
         [ "Constant", "NONE", orange, "NONE" ],
-        [ "Error", error_bg, darkred, "NONE" ],
+        [ "Error", red_highlighter, darkred, "NONE" ],
         [ "Identifier", "NONE", darkcyan, "NONE" ],
         [ "Ignore", white, darkgrey, "NONE" ],
         [ "PreProc", white, darkcyan, "NONE" ],
-        [ "Special", white, darkgrey, "NONE" ],
+        [ "Special", white, orange, "NONE" ],
         [ "Statement", white, darkgrey, "NONE" ],
         [ "String", "NONE", darkyellow, "NONE" ],
         [ "Number", "Constant" ],
         [ "Todo", blue_highlighter, black, "NONE" ],
-        [ "Type", white, darkgrey, "NONE" ],
-        [ "Underlined", white, darkgrey, "NONE" ],
+        [ "Type", white, pink, "NONE" ],
+        [ "Underlined", white, darkgrey, "underline" ],
         [ "StatusLine", darkcyan, offwhite, "NONE" ],
         [ "StatusLineNC", verylightgrey, black, "NONE" ],
         [ "VertSplit", white, darkcyan, "NONE" ],
         [ "TabLine", cyan, white, "NONE" ],
         [ "TabLineFill", darkcyan, darkcyan, "NONE" ],
-        [ "TabLineSel", offwhite, black, "NONE" ],
+        [ "TabLineSel", white, black, "NONE" ],
         [ "Title", white, darkgrey, "NONE" ],
         [ "CursorLine", offwhite, "NONE", "NONE" ],
         [ "LineNr", white, darkgrey, "NONE" ],
@@ -168,24 +166,24 @@
         [ "PmenuSel", white, darkgrey, "NONE" ],
         [ "PmenuThumb", white, darkgrey, "NONE" ],
         [ "FoldColumn", white, darkgrey, "NONE" ],
-        [ "Folded", folded_bg, darkblue, "NONE" ],
-        [ "WildMenu", white, black, "NONE" ],
+        [ "Folded", blue_highlighter, darkblue, "NONE" ],
+        [ "WildMenu", yellow_highlighter, black, "NONE" ],
         [ "SpecialKey", white, darkgrey, "NONE" ],
-        [ "DiffAdd", diffadd_bg, darkgreen, "NONE" ],
-        [ "DiffChange", diffchange_bg, black, "NONE" ],
-        [ "DiffDelete", error_bg, darkred, "NONE" ],
+        [ "DiffAdd", green_highlighter, darkgreen, "NONE" ],
+        [ "DiffChange", orange_highlighter, black, "NONE" ],
+        [ "DiffDelete", red_highlighter, darkred, "NONE" ],
         [ "DiffText", difftext_bg, darkblue, "NONE" ],
         [ "IncSearch", yellow, black, "NONE" ],
         [ "Search", yellow, black, "NONE" ],
         [ "Directory", white, darkgrey, "NONE" ],
-        [ "MatchParen", matchparen_bg, darkcyan, "NONE" ],
-        [ "SpellBad", white, black, "NONE", red ],
-        [ "SpellCap", white, black, "NONE", purple ],
-        [ "SpellLocal", white, black, "NONE", orange ],
-        [ "SpellRare", white, black, "NONE", cyan ],
+        [ "MatchParen", verylightgrey, darkcyan, "NONE" ],
+        [ "SpellBad", red_highlighter, black, "undercurl", red ],
+        [ "SpellCap", orange_highlighter, black, "undercurl", orange ],
+        [ "SpellLocal", orange_highlighter, black, "undercurl", orange ],
+        [ "SpellRare", green_highlighter, black, "undercurl", darkgreen ],
         [ "ColorColumn", offwhite, "NONE", "NONE" ],
         [ "SignColumn", white, darkgreen, "NONE" ],
-        [ "ErrorMsg", error_bg, darkred, "NONE" ],
+        [ "ErrorMsg", red_highlighter, darkred, "NONE" ],
         [ "ModeMsg", white, darkgrey, "NONE" ],
         [ "MoreMsg", white, darkgrey, "NONE" ],
         [ "Question", white, darkgrey, "NONE" ],
@@ -215,7 +213,7 @@
         lightgrey,
         darkgrey,
         red,
-        green,
+        pink,
         yellow,
         purple,
         orange,

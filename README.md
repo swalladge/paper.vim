@@ -24,11 +24,14 @@ of the MIT license.
 
 Pull requests, bug reports, suggestions, or comments appreciated!
 
+Example screenshot:
+
+![screenshot displaying some code](https://static.swalladge.id.au/vim/paper/screenshot1.png)
+
 
 ## Installation
 
 `:h packages` or use a package manager of your choice.
-
 
 ## Usage
 
