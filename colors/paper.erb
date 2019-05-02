@@ -41,32 +41,37 @@
     # If your colors are defined correctly, the resulting colorscheme is guaranteed
     # to work in GVim (Windows/Linux), MacVim, and any properly set up terminal emulator.
 
-    black                  = ["#444444", 238, "black"]
-    darkred                = ["#AF0000", 124, "darkred"]
-    darkgreen              = ["#008700", 28, "darkgreen"]
-    darkyellow             = ["#5F8700", 64, "darkyellow"]
-    darkblue               = ["#0087AF", 31, "darkblue"]
 
-    darkcyan               = ["#005F87", 24, "darkcyan"]
-    darkgrey               = ["#777777", 102, "darkgray"]
+    # foreground colours
+    # monochrome
+    black                  = ["#000000", 0, "black"]
+    darkgrey               = ["#3A3A3A", 237, "darkgray"]
+    grey                   = ["#6C6C6C", 242, "gray"]
 
-    lightgrey              = ["#ADADAD", 250, "gray"]
+    # colourful
     red                    = ["#D70000", 160, "red"]
-    pink                   = ["#D70087", 162, "magenta"]
-    yellow                 = ['#FFFF5F', 227, "yellow"]
-    purple                 = ["#8700AF", 91, "blue"]
     orange                 = ["#D75F00", 166, "magenta"]
-    cyan                   = ["#005FAF", 25, "cyan"]
+    green                  = ["#008700", 28, "darkgreen"]
+    cyan                   = ["#005F87", 24, "darkcyan"]
+    blue                   = ["#0000d7", 20, "darkblue"]
+    violet                 = ["#8700AF", 91, "blue"]
+    magenta                = ["#D70087", 162, "magenta"]
+
+
+    # background colours
+    # shades of background
     white                  = ["#EEEEEE", 255, "white"]
-
     offwhite               = ["#E4E4E4", 254, "white"]
-    verylightgrey          = ['#C8C8C8', 252, "white"]
+    verylightgrey          = ['#D0D0D0', 252, "white"]
 
-    green_highlighter      = ['#AFFFAF', 157, "white"]
+    # bright highlighted backgrounds
+    red_highlighter        = ['#FFD7D7', 224, "red"]
     orange_highlighter     = ['#FFD787', 222, "orange"]
-    red_highlighter        = ['#FFD7FF', 225, "red"]
     yellow_highlighter     = ['#FFFF00', 226, "yellow"]
-    blue_highlighter       = ['#D7FFFF', 195, "cyan"]
+    green_highlighter      = ['#AFFFAF', 157, "white"]
+    cyan_highlighter       = ['#D7FFFF', 195, "cyan"]
+    magenta_highlighter    = ['#FFD7FF', 225, "red"]
+
 
     # Step 3: highlights
     #
@@ -103,67 +108,71 @@
     # remove any if you want a working colorscheme.
     highlights = [
         [ "Normal", white, black, "NONE" ],
-        [ "NonText", white, darkgrey, "NONE" ],
-        [ "Comment", "NONE", darkgrey, "NONE" ],
-        [ "Constant", "NONE", orange, "NONE" ],
-        [ "Error", red_highlighter, darkred, "NONE" ],
-        [ "Identifier", "NONE", darkcyan, "NONE" ],
-        [ "Ignore", white, darkgrey, "NONE" ],
-        [ "PreProc", white, darkcyan, "NONE" ],
+        [ "NonText", white, grey, "NONE" ],
+        [ "Comment", white, grey, "italic" ],
+        [ "Constant", white, violet, "NONE" ],
+        [ "Error", red_highlighter, red, "NONE" ],
+        [ "Identifier", white, red, "NONE" ],
+        [ "Ignore", white, grey, "NONE" ],
+        [ "PreProc", white, cyan, "NONE" ],
         [ "Special", white, orange, "NONE" ],
-        [ "Statement", white, darkgrey, "NONE" ],
-        [ "String", "NONE", darkyellow, "NONE" ],
+        [ "Statement", white, cyan, "NONE" ],
+        [ "String", white, green, "NONE" ],
         [ "Number", "Constant" ],
-        [ "Todo", blue_highlighter, black, "bold" ],
-        [ "Type", white, pink, "NONE" ],
+        [ "Todo", cyan_highlighter, black, "bold" ],
+        [ "Type", white, magenta, "NONE" ],
         [ "Underlined", white, darkgrey, "underline" ],
-        [ "StatusLine", darkcyan, offwhite, "NONE" ],
+        [ "StatusLine", cyan, white, "NONE" ],
         [ "StatusLineNC", verylightgrey, black, "NONE" ],
-        [ "VertSplit", white, darkcyan, "NONE" ],
+        [ "VertSplit", white, cyan, "NONE" ],
         [ "TabLine", cyan, white, "NONE" ],
-        [ "TabLineFill", darkcyan, darkcyan, "NONE" ],
-        [ "TabLineSel", white, black, "NONE" ],
+        [ "TabLineFill", cyan, cyan, "NONE" ],
+        [ "TabLineSel", orange_highlighter, black, "NONE" ],
         [ "Title", white, darkgrey, "NONE" ],
         [ "CursorLine", offwhite, "NONE", "NONE" ],
         [ "LineNr", white, darkgrey, "NONE" ],
         [ "CursorLineNr", white, orange, "NONE" ],
         [ "helpLeadBlank", white, darkgrey, "NONE" ],
         [ "helpNormal", white, darkgrey, "NONE" ],
-        [ "Visual", darkblue, white, "NONE" ],
-        [ "VisualNOS", darkblue, white, "NONE" ],
+        [ "Visual", yellow_highlighter, "NONE", "NONE" ],
+        [ "VisualNOS", yellow_highlighter, "NONE", "NONE" ],
         [ "Pmenu", verylightgrey, black, "NONE" ],
         [ "PmenuSbar", white, darkgrey, "NONE" ],
         [ "PmenuSel", white, darkgrey, "NONE" ],
         [ "PmenuThumb", white, darkgrey, "NONE" ],
         [ "FoldColumn", white, darkgrey, "NONE" ],
-        [ "Folded", offwhite, darkgrey, "NONE" ],
+        [ "Folded", offwhite, black, "italic" ],
         [ "WildMenu", yellow_highlighter, black, "NONE" ],
         [ "SpecialKey", white, darkgrey, "NONE" ],
-        [ "DiffAdd", green_highlighter, darkgreen, "NONE" ],
+        [ "DiffAdd", green_highlighter, green, "NONE" ],
         [ "DiffChange", orange_highlighter, black, "NONE" ],
-        [ "DiffDelete", red_highlighter, darkred, "NONE" ],
+        [ "DiffDelete", red_highlighter, red, "NONE" ],
         [ "DiffText", yellow_highlighter, black, "NONE" ],
-        [ "IncSearch", yellow, black, "NONE" ],
-        [ "Search", yellow, black, "NONE" ],
+        [ "IncSearch", yellow_highlighter, black, "NONE" ],
+        [ "Search", yellow_highlighter, black, "NONE" ],
         [ "Directory", white, darkgrey, "NONE" ],
-        [ "MatchParen", verylightgrey, darkcyan, "NONE" ],
-        [ "SpellBad", red_highlighter, black, "undercurl", red ],
-        [ "SpellCap", orange_highlighter, black, "undercurl", orange ],
-        [ "SpellLocal", orange_highlighter, black, "undercurl", orange ],
-        [ "SpellRare", green_highlighter, black, "undercurl", darkgreen ],
+        [ "MatchParen", verylightgrey, cyan, "NONE" ],
+        [ "SpellBad", red_highlighter, black, "NONE", red ],
+        [ "SpellCap", magenta_highlighter, black, "NONE", orange ],
+        [ "SpellLocal", orange_highlighter, black, "NONE", orange ],
+        [ "SpellRare", green_highlighter, black, "NONE", green ],
         [ "ColorColumn", offwhite, "NONE", "NONE" ],
-        [ "SignColumn", white, darkgreen, "NONE" ],
-        [ "ErrorMsg", red_highlighter, darkred, "NONE" ],
+        [ "SignColumn", white, green, "NONE" ],
+        [ "ErrorMsg", red_highlighter, red, "NONE" ],
         [ "ModeMsg", white, darkgrey, "NONE" ],
         [ "MoreMsg", white, darkgrey, "NONE" ],
         [ "Question", white, darkgrey, "NONE" ],
         [ "WarningMsg", "Error" ],
-        [ "Cursor", darkcyan, white, "NONE" ],
+        [ "Cursor", cyan, white, "NONE" ],
         [ "CursorColumn", offwhite, "NONE", "NONE" ],
         [ "QuickFixLine", "Search" ],
-        [ "StatusLineTerm", darkcyan, offwhite, "NONE" ],
+        [ "StatusLineTerm", cyan, offwhite, "NONE" ],
         [ "StatusLineTermNC", verylightgrey, black, "NONE" ],
-        [ "Keyword", "NONE", cyan, "NONE" ],
+        [ "Keyword", white, cyan, "NONE" ],
+        [ "Character", "String" ],
+        [ "helpHyperTextJump", white, cyan, "underline" ],
+        [ "diffAdded", "DiffAdd" ],
+        [ "diffRemoved", "DiffDelete" ],
     ]
 
     # Define the color palette used by :terminal when in GUI Vim
@@ -174,18 +183,18 @@
     # The expected values are colors defined in step 2.
     terminal_ansi_colors = [
         black,
-        darkred,
-        darkgreen,
-        darkyellow,
-        darkblue,
+        red,
+        green,
+        green,
+        blue,
         darkgrey,
-        darkcyan,
-        lightgrey,
+        cyan,
+        grey,
         darkgrey,
         red,
-        pink,
-        yellow,
-        purple,
+        magenta,
+        yellow_highlighter,
+        violet,
         orange,
         cyan,
         white
