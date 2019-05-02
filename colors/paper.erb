@@ -44,14 +44,14 @@
 
     # foreground colours
     # monochrome
-    black                  = ["#000000", 0, "black"]
+    black                  = ["#000000", 16, "black"]
     darkgrey               = ["#3A3A3A", 237, "darkgray"]
     grey                   = ["#6C6C6C", 242, "gray"]
 
     # colourful
     red                    = ["#D70000", 160, "red"]
     orange                 = ["#D75F00", 166, "magenta"]
-    green                  = ["#008700", 28, "darkgreen"]
+    green                  = ["#005f00", 22, "darkgreen"]
     cyan                   = ["#005F87", 24, "darkcyan"]
     blue                   = ["#0000d7", 20, "darkblue"]
     violet                 = ["#8700AF", 91, "blue"]
@@ -112,7 +112,7 @@
         [ "Comment", white, grey, "italic" ],
         [ "Constant", white, violet, "NONE" ],
         [ "Error", red_highlighter, red, "NONE" ],
-        [ "Identifier", white, red, "NONE" ],
+        [ "Identifier", white, blue, "NONE" ],
         [ "Ignore", white, grey, "NONE" ],
         [ "PreProc", white, cyan, "NONE" ],
         [ "Special", white, orange, "NONE" ],
@@ -144,18 +144,18 @@
         [ "Folded", offwhite, black, "italic" ],
         [ "WildMenu", yellow_highlighter, black, "NONE" ],
         [ "SpecialKey", white, darkgrey, "NONE" ],
-        [ "DiffAdd", green_highlighter, green, "NONE" ],
+        [ "DiffAdd", green_highlighter, black, "NONE" ],
         [ "DiffChange", orange_highlighter, black, "NONE" ],
-        [ "DiffDelete", red_highlighter, red, "NONE" ],
+        [ "DiffDelete", red_highlighter, black, "NONE" ],
         [ "DiffText", yellow_highlighter, black, "NONE" ],
         [ "IncSearch", yellow_highlighter, black, "NONE" ],
         [ "Search", yellow_highlighter, black, "NONE" ],
         [ "Directory", white, darkgrey, "NONE" ],
         [ "MatchParen", verylightgrey, cyan, "NONE" ],
-        [ "SpellBad", red_highlighter, black, "NONE", red ],
-        [ "SpellCap", magenta_highlighter, black, "NONE", orange ],
-        [ "SpellLocal", orange_highlighter, black, "NONE", orange ],
-        [ "SpellRare", green_highlighter, black, "NONE", green ],
+        [ "SpellBad", red_highlighter, black, "NONE" ],
+        [ "SpellCap", magenta_highlighter, black, "NONE" ],
+        [ "SpellLocal", orange_highlighter, black, "NONE" ],
+        [ "SpellRare", green_highlighter, black, "NONE" ],
         [ "ColorColumn", offwhite, "NONE", "NONE" ],
         [ "SignColumn", white, green, "NONE" ],
         [ "ErrorMsg", red_highlighter, red, "NONE" ],
