@@ -16,8 +16,7 @@ If something doesn't look quite right, please open and issue with a description
 of the problem and ideally a screenshot.
 
 Inspired by [papercolor-theme](https://github.com/NLKNguyen/papercolor-theme)
-by [Nikyle Nguyen](https://github.com/NLKNguyen). Design copied under the terms
-of the MIT license.
+by [Nikyle Nguyen](https://github.com/NLKNguyen).
 
 Pull requests, bug reports, suggestions, or comments appreciated!
 
@@ -63,7 +62,6 @@ Edit the variables in `colors/paper.erb` and run `make` to build
 ```
 The MIT License (MIT)
 
-Copyright (c) 2015-2017 Nikyle Nguyen
 Copyright (c) 2019 Samuel Walladge
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
